@@ -174,17 +174,17 @@
       if (!C) return;
 
       // Nav links
-      document.getElementById('nav-home-link').href = C.pages.home;
-      document.getElementById('nav-privacy-link').href = C.pages.privacy;
-      document.getElementById('nav-contact-link').href = C.pages.contact;
+      document.getElementById('nav-home-link').href = pageURL(C.pages.home);
+      document.getElementById('nav-privacy-link').href = pageURL(C.pages.privacy);
+      document.getElementById('nav-contact-link').href = pageURL(C.pages.contact);
       document.getElementById('nav-install-link').href = C.links.chromeWebStore;
       document.getElementById('hero-install-link').href = C.links.chromeWebStore;
       document.getElementById('cta-install-link').href = C.links.chromeWebStore;
 
       // Footer
       const footerLinks = document.getElementById('footer-links');
-      footerLinks.children[0].querySelector('a').href = C.pages.privacy;
-      footerLinks.children[1].querySelector('a').href = C.pages.contact;
+      footerLinks.children[0].querySelector('a').href = pageURL(C.pages.privacy);
+      footerLinks.children[1].querySelector('a').href = pageURL(C.pages.contact);
       footerLinks.children[2].querySelector('a').href = C.links.linktree;
       document.getElementById('footer-version').textContent = `© 2026 ${C.name} · ${C.version}`;
     });

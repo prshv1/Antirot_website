@@ -11,10 +11,14 @@ const SITE_CONFIG = {
 
   // ── Page URLs ──
   // Update these if you change hosting or structure
+  // ── Base Path ──
+  // Set to '/' for custom domain, or '/repo-name/' for GitHub Pages
+  basePath: '/Antirot_web/',
+
   pages: {
-    home: '/index.html',
-    privacy: '/privacy.html',
-    contact: '/contact.html',
+    home: 'index.html',
+    privacy: 'privacy.html',
+    contact: 'contact.html',
     // Future pages
     login: '#',
     dashboard: '#',
@@ -47,4 +51,9 @@ const SITE_CONFIG = {
 // Make config globally available
 if (typeof window !== 'undefined') {
   window.SITE_CONFIG = SITE_CONFIG;
+  // Helper: resolve a page path with basePath
+  window.pageURL = function(page) {
+    if (page === '#') return '#';
+    return SITE_CONFIG.basePath + page;
+  };
 }

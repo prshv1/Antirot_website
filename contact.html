@@ -121,9 +121,9 @@
       if (!C) return;
 
       // Nav
-      document.getElementById('nav-home-link').href = C.pages.home;
-      document.getElementById('nav-home-link-2').href = C.pages.home;
-      document.getElementById('nav-privacy-link').href = C.pages.privacy;
+      document.getElementById('nav-home-link').href = pageURL(C.pages.home);
+      document.getElementById('nav-home-link-2').href = pageURL(C.pages.home);
+      document.getElementById('nav-privacy-link').href = pageURL(C.pages.privacy);
       document.getElementById('nav-install-link').href = C.links.chromeWebStore;
 
       // Info cards
@@ -134,8 +134,8 @@
 
       // Footer
       const footerLinks = document.getElementById('footer-links');
-      footerLinks.children[0].querySelector('a').href = C.pages.home;
-      footerLinks.children[1].querySelector('a').href = C.pages.privacy;
+      footerLinks.children[0].querySelector('a').href = pageURL(C.pages.home);
+      footerLinks.children[1].querySelector('a').href = pageURL(C.pages.privacy);
       footerLinks.children[2].querySelector('a').href = C.links.linktree;
       document.getElementById('footer-version').textContent = `© 2026 ${C.name} · ${C.version}`;
 
