@@ -27,10 +27,10 @@ const SITE_CONFIG = {
 
   // ── External Links ──
   links: {
-    chromeWebStore: '#', // Update when published
+    chromeWebStore: 'https://github.com/prshv1/Anti_Rot', // Update when published
     linktree: 'https://linktr.ee/prshv1',
     github: 'https://github.com/prshv1',
-    twitter: '#',
+    twitter: 'https://x.com/prshv07',
     email: 'galaparshva0@gmail.com',
     domain: 'https://antirot.in',
   },
