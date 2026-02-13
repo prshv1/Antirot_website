@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Anti-Rot</title>
+  <meta name="description" content="Privacy Policy for the Anti-Rot Chrome Extension.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ── Nav ── -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo" id="nav-home-link">
+          <div class="nav-logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+              <line x1="12" y1="22" x2="12" y2="15.5"/>
+              <polyline points="22 8.5 12 15.5 2 8.5"/>
+            </svg>
+          </div>
+          <span class="nav-logo-text">Anti-Rot</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#" id="nav-home-link-2">Home</a></li>
+          <li><a href="#" id="nav-contact-link">Contact</a></li>
+          <li><a href="#" class="nav-cta" id="nav-install-link">Install Free</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── Content ── -->
+    <main class="content-page section">
+      <div class="page-header">
+        <h1>Privacy Policy</h1>
+        <p class="page-meta" id="effective-date"></p>
+      </div>
+
+      <div class="content-body">
+        <h2>Overview</h2>
+        <p>Anti-Rot is a Chrome extension that classifies YouTube videos to help you stay focused. This policy explains what data we handle and how we handle it.</p>
+        <p>We built this tool because we believe your attention is yours. The same principle applies to your data.</p>
+
+        <h2>Data We Collect</h2>
+        <p><strong>YouTube Video URLs</strong> — When you open a YouTube video, the extension sends the video URL to our backend server for classification. This is required for the extension to function.</p>
+        <p><strong>Video Transcripts</strong> — Our server fetches the publicly available transcript of the video via a third-party API (Supadata). The transcript is used solely for AI classification and is not stored permanently.</p>
+        <p><strong>Classification Results</strong> — The AI's output (valuable or time-waste) is cached temporarily on our server to improve response times for repeated requests. No personal data is included in this cache.</p>
+
+        <h2>Data We Don't Collect</h2>
+        <ul>
+          <li>Your browsing history outside of YouTube video pages</li>
+          <li>Your YouTube account information or login credentials</li>
+          <li>Any personally identifiable information (name, email, etc.) unless you explicitly provide it</li>
+          <li>Your YouTube watch history or recommendations</li>
+          <li>Data from any other websites or tabs</li>
+        </ul>
+
+        <h2>Local Storage</h2>
+        <p>The extension stores the following data locally on your device using Chrome's storage API:</p>
+        <ul>
+          <li>Extension enabled/disabled state</li>
+          <li>Whitelisted channel names</li>
+          <li>Statistics (blocked and allowed video counts)</li>
+          <li>Theme preference (dark/light)</li>
+        </ul>
+        <p>This data never leaves your device unless you explicitly sync Chrome settings.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>Our backend uses the following external services to process video classification:</p>
+        <ul>
+          <li><strong>Supadata API</strong> — For extracting publicly available YouTube video transcripts</li>
+          <li><strong>OpenRouter</strong> — For routing AI classification requests to large language models</li>
+          <li><strong>Google Cloud Run</strong> — For hosting our backend server</li>
+        </ul>
+        <p>We do not sell, share, or transfer your data to any third party for advertising, marketing, or any purpose unrelated to the extension's core functionality.</p>
+
+        <h2>Data Retention</h2>
+        <p>Video URLs and transcripts are processed in real-time and are not permanently stored on our servers. Cached classification results are stored temporarily and are automatically evicted when the cache reaches capacity. No personal data is retained.</p>
+
+        <h2>Your Rights</h2>
+        <p>You can clear all locally stored extension data at any time by uninstalling the extension or clearing Chrome's extension storage. Since we don't collect personal data on our servers, there is nothing to request deletion of.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this policy as the extension evolves (e.g., when we add user accounts or paid tiers). Significant changes will be communicated through the extension or this website.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about this policy? Reach out at <a href="#" id="contact-email-link"></a> or visit our <a href="#" id="contact-page-link">contact page</a>.</p>
+      </div>
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="footer">
+      <div class="section footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+              <line x1="12" y1="22" x2="12" y2="15.5"/>
+              <polyline points="22 8.5 12 15.5 2 8.5"/>
+            </svg>
+          </div>
+          <span class="footer-brand">Anti-Rot</span>
+        </div>
+        <ul class="footer-links" id="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" target="_blank">@prshv1</a></li>
+        </ul>
+        <span class="footer-copy" id="footer-version"></span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const C = window.SITE_CONFIG;
+      if (!C) return;
+
+      // Nav
+      document.getElementById('nav-home-link').href = C.pages.home;
+      document.getElementById('nav-home-link-2').href = C.pages.home;
+      document.getElementById('nav-contact-link').href = C.pages.contact;
+      document.getElementById('nav-install-link').href = C.links.chromeWebStore;
+
+      // Content
+      document.getElementById('effective-date').textContent = `Effective ${C.legal.effectiveDate}`;
+      const emailLink = document.getElementById('contact-email-link');
+      emailLink.href = `mailto:${C.legal.contactEmail}`;
+      emailLink.textContent = C.legal.contactEmail;
+      document.getElementById('contact-page-link').href = C.pages.contact;
+
+      // Footer
+      const footerLinks = document.getElementById('footer-links');
+      footerLinks.children[0].querySelector('a').href = C.pages.home;
+      footerLinks.children[1].querySelector('a').href = C.pages.contact;
+      footerLinks.children[2].querySelector('a').href = C.links.linktree;
+      document.getElementById('footer-version').textContent = `© 2026 ${C.name} · ${C.version}`;
+    });
+  </script>
+</body>
+</html>

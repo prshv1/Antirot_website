@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Anti-Rot</title>
+  <meta name="description" content="Get in touch with the Anti-Rot team.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ── Nav ── -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo" id="nav-home-link">
+          <div class="nav-logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+              <line x1="12" y1="22" x2="12" y2="15.5"/>
+              <polyline points="22 8.5 12 15.5 2 8.5"/>
+            </svg>
+          </div>
+          <span class="nav-logo-text">Anti-Rot</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#" id="nav-home-link-2">Home</a></li>
+          <li><a href="#" id="nav-privacy-link">Privacy</a></li>
+          <li><a href="#" class="nav-cta" id="nav-install-link">Install Free</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── Content ── -->
+    <main class="content-page section">
+      <div class="page-header">
+        <h1>Get in Touch</h1>
+        <p class="page-meta">Bug reports, feedback, collabs — all welcome.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Info Cards -->
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-card-label">Email</div>
+            <div class="contact-card-value">
+              <a href="#" id="info-email-link"></a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-label">Socials</div>
+            <div class="contact-card-value">
+              <a href="#" id="info-linktree-link" target="_blank">linktr.ee/prshv1</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="you@email.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" class="form-input" placeholder="Bug report, feature request, feedback...">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" class="form-textarea" placeholder="What's on your mind?"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary form-submit" id="sendBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+          <p id="formStatus" style="font-size: 13px; color: var(--text-muted); display: none;"></p>
+        </div>
+      </div>
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="footer">
+      <div class="section footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+              <line x1="12" y1="22" x2="12" y2="15.5"/>
+              <polyline points="22 8.5 12 15.5 2 8.5"/>
+            </svg>
+          </div>
+          <span class="footer-brand">Anti-Rot</span>
+        </div>
+        <ul class="footer-links" id="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#" target="_blank">@prshv1</a></li>
+        </ul>
+        <span class="footer-copy" id="footer-version"></span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const C = window.SITE_CONFIG;
+      if (!C) return;
+
+      // Nav
+      document.getElementById('nav-home-link').href = C.pages.home;
+      document.getElementById('nav-home-link-2').href = C.pages.home;
+      document.getElementById('nav-privacy-link').href = C.pages.privacy;
+      document.getElementById('nav-install-link').href = C.links.chromeWebStore;
+
+      // Info cards
+      const emailLink = document.getElementById('info-email-link');
+      emailLink.href = `mailto:${C.links.email}`;
+      emailLink.textContent = C.links.email;
+      document.getElementById('info-linktree-link').href = C.links.linktree;
+
+      // Footer
+      const footerLinks = document.getElementById('footer-links');
+      footerLinks.children[0].querySelector('a').href = C.pages.home;
+      footerLinks.children[1].querySelector('a').href = C.pages.privacy;
+      footerLinks.children[2].querySelector('a').href = C.links.linktree;
+      document.getElementById('footer-version').textContent = `© 2026 ${C.name} · ${C.version}`;
+
+      // ── Contact Form Handler ──
+      // Since this is GitHub Pages (static), we use mailto as fallback
+      // Replace with a real form backend (Formspree, Getform, etc.) when ready
+      const sendBtn = document.getElementById('sendBtn');
+      const formStatus = document.getElementById('formStatus');
+
+      sendBtn.addEventListener('click', () => {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          formStatus.style.display = 'block';
+          formStatus.style.color = 'var(--accent)';
+          formStatus.textContent = 'Fill in name, email, and message at minimum.';
+          return;
+        }
+
+        // Open mailto with prefilled data
+        const mailtoBody = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+        const mailtoSubject = subject || 'Anti-Rot Contact Form';
+        const mailtoLink = `mailto:${C.links.email}?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(mailtoBody)}`;
+        window.location.href = mailtoLink;
+
+        formStatus.style.display = 'block';
+        formStatus.style.color = 'var(--green)';
+        formStatus.textContent = 'Opening your email client...';
+      });
+    });
+  </script>
+</body>
+</html>
