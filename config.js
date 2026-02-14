@@ -13,7 +13,7 @@ const SITE_CONFIG = {
   // Update these if you change hosting or structure
   // ── Base Path ──
   // Set to '/' for custom domain, or '/repo-name/' for GitHub Pages
-  basePath: '/Antirot_web/',
+  basePath: '/Antirot_website/',
 
   pages: {
     home: 'index.html',
