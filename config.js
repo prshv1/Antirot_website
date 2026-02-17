@@ -18,7 +18,7 @@ const SITE_CONFIG = {
 
   // ── External Links ──
   links: {
-    chromeWebStore: 'https://chromewebstore.google.com/detail/peicgeopikaehdnnaloamfhhikikegan?utm_source=item-share-cb', // Update when published
+    chromeWebStore: 'https://chromewebstore.google.com/detail/anti-rot/peicgeopikaehdnnaloamfhhikikegan', // Update when published
     linktree: 'https://linktr.ee/prshv1',
     github: 'https://github.com/prshv1',
     twitter: 'https://x.com/prshv07',
