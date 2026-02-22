@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+  <defs>
+    <linearGradient id="bannerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#1a1a2e" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#ef4444" flood-opacity="0.35" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="thumbShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="btnGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#ef4444" flood-opacity="0.3" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ==================== SCENE 1: YOUTUBE CHANNEL PAGE ==================== -->
+  <g id="ytPage">
+    <rect width="1280" height="800" fill="#0f0f0f"/>
+
+    <!-- Top navbar -->
+    <rect width="1280" height="56" fill="#0f0f0f"/>
+    <g transform="translate(24, 14)">
+      <rect x="0" y="5" width="20" height="2.5" rx="1" fill="#f1f1f1"/>
+      <rect x="0" y="12" width="20" height="2.5" rx="1" fill="#f1f1f1"/>
+      <rect x="0" y="19" width="20" height="2.5" rx="1" fill="#f1f1f1"/>
+      <rect x="36" y="2" width="32" height="22" rx="5" fill="#FF0000"/>
+      <polygon points="52,13 46,9 46,17" fill="white"/>
+      <text x="74" y="19" fill="#f1f1f1" font-size="18" font-weight="700" font-family="Arial, sans-serif" letter-spacing="-0.5">YouTube</text>
+    </g>
+
+    <!-- Search bar -->
+    <g transform="translate(370, 10)">
+      <rect width="480" height="36" rx="18" fill="transparent" stroke="#303030" stroke-width="1.5"/>
+      <text x="20" y="23" fill="#717171" font-size="14" font-family="Arial, sans-serif">Search</text>
+      <circle cx="504" cy="18" r="18" fill="#222222"/>
+      <circle cx="502" cy="16" r="5" fill="none" stroke="#f1f1f1" stroke-width="1.5"/>
+      <line x1="506" y1="20" x2="509" y2="23" stroke="#f1f1f1" stroke-width="1.5"/>
+    </g>
+
+    <!-- Right nav icons -->
+    <g transform="translate(1190, 18)">
+      <circle cx="0" cy="12" r="14" fill="#7c3aed"/>
+      <text x="0" y="17" fill="white" font-size="13" font-weight="600" font-family="Arial, sans-serif" text-anchor="middle">P</text>
+    </g>
+
+    <line x1="0" y1="56" x2="1280" y2="56" stroke="#272727" stroke-width="1"/>
+
+    <!-- Sidebar -->
+    <g transform="translate(0, 56)">
+      <rect width="72" height="744" fill="#0f0f0f"/>
+      <g transform="translate(14, 18)">
+        <rect x="10" y="0" width="22" height="3" rx="1" fill="#f1f1f1"/>
+        <rect x="10" y="6" width="22" height="3" rx="1" fill="#f1f1f1"/>
+        <rect x="6" y="12" width="30" height="3" rx="1" fill="none"/>
+        <path d="M21 2 L12 9 L12 18 L16 18 L16 12 L26 12 L26 18 L30 18 L30 9 Z" fill="#f1f1f1" transform="translate(-1, 2) scale(0.7)"/>
+        <text x="21" y="28" fill="#f1f1f1" font-size="9" font-family="Arial, sans-serif" text-anchor="middle">Home</text>
+      </g>
+      <g transform="translate(14, 80)">
+        <rect x="8" y="0" width="14" height="18" rx="4" fill="none" stroke="#aaa" stroke-width="1.5" transform="translate(4,0)"/>
+        <text x="21" y="30" fill="#aaa" font-size="9" font-family="Arial, sans-serif" text-anchor="middle">Shorts</text>
+      </g>
+      <g transform="translate(14, 140)">
+        <rect x="6" y="2" width="18" height="12" rx="2" fill="none" stroke="#aaa" stroke-width="1.5" transform="translate(4,0)"/>
+        <text x="21" y="28" fill="#aaa" font-size="9" font-family="Arial, sans-serif" text-anchor="middle">Subs</text>
+      </g>
+    </g>
+
+    <!-- ===== CHANNEL PAGE ===== -->
+    <g transform="translate(72, 56)">
+      <!-- Banner -->
+      <rect width="1208" height="170" fill="#1a1a2e"/>
+      <rect width="1208" height="170" fill="url(#bannerGrad)" opacity="0.8"/>
+      <circle cx="200" cy="85" r="120" fill="#7c3aed" opacity="0.15"/>
+      <circle cx="900" cy="60" r="180" fill="#3b82f6" opacity="0.1"/>
+      <circle cx="600" cy="140" r="80" fill="#ef4444" opacity="0.08"/>
+
+      <!-- Channel info -->
+      <g transform="translate(40, 190)">
+        <circle cx="44" cy="44" r="44" fill="#7c3aed"/>
+        <text x="44" y="54" fill="white" font-size="32" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle">T</text>
+
+        <g transform="translate(110, 8)">
+          <text fill="#f1f1f1" font-size="24" font-weight="700" font-family="Arial, sans-serif">TechVault</text>
+          <g transform="translate(142, 1)">
+            <circle cx="8" cy="4" r="7" fill="#aaa"/>
+            <polyline points="5,4 7,6 11,2" fill="none" stroke="#0f0f0f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <text y="28" fill="#aaaaaa" font-size="13" font-family="Arial, sans-serif">@techvault · 69M subscribers · 2.1K videos</text>
+          <text y="50" fill="#717171" font-size="13" font-family="Arial, sans-serif">Building the future, one video at a time. Tech reviews, coding, AI deep dives.</text>
+        </g>
+
+        <g transform="translate(900, 20)">
+          <rect width="110" height="36" rx="18" fill="#f1f1f1"/>
+          <text x="55" y="23" fill="#0f0f0f" font-size="14" font-weight="600" font-family="Arial, sans-serif" text-anchor="middle">Subscribe</text>
+        </g>
+      </g>
+
+      <!-- Tabs -->
+      <g transform="translate(40, 300)">
+        <text fill="#f1f1f1" font-size="15" font-weight="600" font-family="Arial, sans-serif">Videos</text>
+        <line x1="0" y1="12" x2="48" y2="12" stroke="#f1f1f1" stroke-width="2.5"/>
+        <text x="80" fill="#aaa" font-size="15" font-weight="500" font-family="Arial, sans-serif">Shorts</text>
+        <text x="145" fill="#aaa" font-size="15" font-weight="500" font-family="Arial, sans-serif">Live</text>
+        <text x="195" fill="#aaa" font-size="15" font-weight="500" font-family="Arial, sans-serif">Playlists</text>
+        <text x="285" fill="#aaa" font-size="15" font-weight="500" font-family="Arial, sans-serif">Community</text>
+      </g>
+      <line x1="40" y1="318" x2="1160" y2="318" stroke="#272727" stroke-width="1"/>
+
+      <!-- ===== ROW 1 THUMBNAILS ===== -->
+      <!-- Thumb 1 — TARGET -->
+      <g id="thumb1" transform="translate(40, 332)" filter="url(#thumbShadow)">
+        <rect width="270" height="152" rx="12" fill="#1e1e2a"/>
+        <rect x="8" y="8" width="254" height="110" rx="8" fill="#252538"/>
+        <circle cx="135" cy="63" r="20" fill="rgba(0,0,0,0.6)"/>
+        <polygon points="130,52 130,74 148,63" fill="white"/>
+        <rect x="222" y="98" width="36" height="16" rx="4" fill="rgba(0,0,0,0.8)"/>
+        <text x="240" y="110" fill="white" font-size="10" font-weight="500" font-family="Arial, sans-serif" text-anchor="middle">12:34</text>
+        <text x="8" y="138" fill="#f1f1f1" font-size="12" font-weight="600" font-family="Arial, sans-serif">I Built an AI Agent in 24 Hours</text>
+        <text x="8" y="150" fill="#717171" font-size="10" font-family="Arial, sans-serif">1.2M views · 3 days ago</text>
+      </g>
+
+      <!-- Thumb 2 -->
+      <g transform="translate(330, 332)" filter="url(#thumbShadow)">
+        <rect width="270" height="152" rx="12" fill="#1e1e2a"/>
+        <rect x="8" y="8" width="254" height="110" rx="8" fill="#1a2a1a"/>
+        <circle cx="135" cy="63" r="20" fill="rgba(0,0,0,0.6)"/>
+        <polygon points="130,52 130,74 148,63" fill="white"/>
+        <rect x="222" y="98" width="36" height="16" rx="4" fill="rgba(0,0,0,0.8)"/>
+        <text x="240" y="110" fill="white" font-size="10" font-weight="500" font-family="Arial, sans-serif" text-anchor="middle">8:15</text>
+        <text x="8" y="138" fill="#f1f1f1" font-size="12" font-weight="600" font-family="Arial, sans-serif">Top 10 Gadgets You NEED in 2026</text>
+        <text x="8" y="150" fill="#717171" font-size="10" font-family="Arial, sans-serif">890K views · 1 week ago</text>
+      </g>
+
+      <!-- Thumb 3 -->
+      <g transform="translate(620, 332)" filter="url(#thumbShadow)">
+        <rect width="270" height="152" rx="12" fill="#1e1e2a"/>
+        <rect x="8" y="8" width="254" height="110" rx="8" fill="#2a1a1a"/>
+        <circle cx="135" cy="63" r="20" fill="rgba(0,0,0,0.6)"/>
+        <polygon points="130,52 130,74 148,63" fill="white"/>
+        <rect x="222" y="98" width="36" height="16" rx="4" fill="rgba(0,0,0,0.8)"/>
+        <text x="240" y="110" fill="white" font-size="10" font-weight="500" font-family="Arial, sans-serif" text-anchor="middle">22:07</text>
+        <text x="8" y="138" fill="#f1f1f1" font-size="12" font-weight="600" font-family="Arial, sans-serif">Why Every Dev Needs Linux</text>
+        <text x="8" y="150" fill="#717171" font-size="10" font-family="Arial, sans-serif">2.4M views · 2 weeks ago</text>
+      </g>
+
+      <!-- Thumb 4 -->
+      <g transform="translate(910, 332)" filter="url(#thumbShadow)">
+        <rect width="250" height="152" rx="12" fill="#1e1e2a"/>
+        <rect x="8" y="8" width="234" height="110" rx="8" fill="#1a1a2a"/>
+        <circle cx="125" cy="63" r="20" fill="rgba(0,0,0,0.6)"/>
+        <polygon points="120,52 120,74 138,63" fill="white"/>
+        <rect x="202" y="98" width="36" height="16" rx="4" fill="rgba(0,0,0,0.8)"/>
+        <text x="220" y="110" fill="white" font-size="10" font-weight="500" font-family="Arial, sans-serif" text-anchor="middle">5:42</text>
+        <text x="8" y="138" fill="#f1f1f1" font-size="12" font-weight="600" font-family="Arial, sans-serif">Cloud Deploy Speedrun</text>
+        <text x="8" y="150" fill="#717171" font-size="10" font-family="Arial, sans-serif">430K views · 5 days ago</text>
+      </g>
+
+      <!-- ===== ROW 2 THUMBNAILS ===== -->
+      <g transform="translate(40, 502)" filter="url(#thumbShadow)">
+        <rect width="270" height="152" rx="12" fill="#1e1e2a"/>
+        <rect x="8" y="8" width="254" height="110" rx="8" fill="#2a2a1a"/>
+        <circle cx="135" cy="63" r="20" fill="rgba(0,0,0,0.6)"/>
+        <polygon points="130,52 130,74 148,63" fill="white"/>
+        <rect x="222" y="98" width="36" height="16" rx="4" fill="rgba(0,0,0,0.8)"/>
+        <text x="240" y="110" fill="white" font-size="10" font-weight="500" font-family="Arial, sans-serif" text-anchor="middle">15:20</text>
+        <text x="8" y="138" fill="#f1f1f1" font-size="12" font-weight="600" font-family="Arial, sans-serif">React vs Svelte — The Final Answer</text>
+        <text x="8" y="150" fill="#717171" font-size="10" font-family="Arial, sans-serif">670K views · 3 weeks ago</text>
+      </g>
+
+      <g transform="translate(330, 502)" filter="url(#thumbShadow)">
+        <rect width="270" height="152" rx="12" fill="#1e1e2a"/>
+        <rect x="8" y="8" width="254" height="110" rx="8" fill="#1a2a2a"/>
+        <circle cx="135" cy="63" r="20" fill="rgba(0,0,0,0.6)"/>
+        <polygon points="130,52 130,74 148,63" fill="white"/>
+        <rect x="222" y="98" width="36" height="16" rx="4" fill="rgba(0,0,0,0.8)"/>
+        <text x="240" y="110" fill="white" font-size="10" font-weight="500" font-family="Arial, sans-serif" text-anchor="middle">18:45</text>
+        <text x="8" y="138" fill="#f1f1f1" font-size="12" font-weight="600" font-family="Arial, sans-serif">$0 to $10K MRR — My SaaS Journey</text>
+        <text x="8" y="150" fill="#717171" font-size="10" font-family="Arial, sans-serif">1.5M views · 1 month ago</text>
+      </g>
+
+      <g transform="translate(620, 502)" filter="url(#thumbShadow)">
+        <rect width="270" height="152" rx="12" fill="#1e1e2a"/>
+        <rect x="8" y="8" width="254" height="110" rx="8" fill="#2a1a2a"/>
+        <circle cx="135" cy="63" r="20" fill="rgba(0,0,0,0.6)"/>
+        <polygon points="130,52 130,74 148,63" fill="white"/>
+        <rect x="222" y="98" width="36" height="16" rx="4" fill="rgba(0,0,0,0.8)"/>
+        <text x="240" y="110" fill="white" font-size="10" font-weight="500" font-family="Arial, sans-serif" text-anchor="middle">9:58</text>
+        <text x="8" y="138" fill="#f1f1f1" font-size="12" font-weight="600" font-family="Arial, sans-serif">Keyboard Tier List — Mechanical</text>
+        <text x="8" y="150" fill="#717171" font-size="10" font-family="Arial, sans-serif">320K views · 2 weeks ago</text>
+      </g>
+
+      <g transform="translate(910, 502)" filter="url(#thumbShadow)">
+        <rect width="250" height="152" rx="12" fill="#1e1e2a"/>
+        <rect x="8" y="8" width="234" height="110" rx="8" fill="#222"/>
+        <circle cx="125" cy="63" r="20" fill="rgba(0,0,0,0.6)"/>
+        <polygon points="120,52 120,74 138,63" fill="white"/>
+        <rect x="202" y="98" width="36" height="16" rx="4" fill="rgba(0,0,0,0.8)"/>
+        <text x="220" y="110" fill="white" font-size="10" font-weight="500" font-family="Arial, sans-serif" text-anchor="middle">31:12</text>
+        <text x="8" y="138" fill="#f1f1f1" font-size="12" font-weight="600" font-family="Arial, sans-serif">Full Stack App in 30 Minutes</text>
+        <text x="8" y="150" fill="#717171" font-size="10" font-family="Arial, sans-serif">980K views · 4 days ago</text>
+      </g>
+    </g>
+
+    <!-- YouTube page fade out -->
+    <animate repeatCount="indefinite" attributeName="opacity" values="1;1;1;0;0" keyTimes="0;0.56;0.59;0.61;1" dur="8s" fill="freeze"/>
+  </g>
+
+  <!-- ==================== HOVER HIGHLIGHT ON THUMB 1 ==================== -->
+  <rect x="112" y="388" width="270" height="152" rx="12" fill="white" opacity="0">
+    <animate repeatCount="indefinite" attributeName="opacity" values="0;0;0.05;0.05;0.10;0;0" keyTimes="0;0.42;0.46;0.53;0.55;0.59;1" dur="8s" fill="freeze"/>
+  </rect>
+
+  <!-- ==================== MOUSE CURSOR ==================== -->
+  <g id="cursor" opacity="0">
+    <path d="M0,0 L0,19 L4.5,14 L8.5,22 L11,21 L7,13 L13,13 Z" fill="white" stroke="#111" stroke-width="0.8"/>
+
+    <animateTransform repeatCount="indefinite" attributeName="transform" type="translate"
+      values="640,780; 640,600; 350,480; 255,440; 250,432; 250,432; 250,432; 250,432"
+      keyTimes="0; 0.18; 0.36; 0.46; 0.50; 0.55; 0.59; 1"
+      dur="8s" fill="freeze" calcMode="spline"
+      keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.16 1 0.3 1; 0 0 1 1; 0 0 1 1; 0 0 1 1"/>
+
+    <animate repeatCount="indefinite" attributeName="opacity" values="0;1;1;1;0;0" keyTimes="0;0.08;0.53;0.58;0.60;1" dur="8s" fill="freeze"/>
+  </g>
+
+  <!-- Click ripple effect -->
+  <circle cx="250" cy="432" r="0" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" opacity="0">
+    <animate repeatCount="indefinite" attributeName="r" values="0;0;0;30;40" keyTimes="0;0.54;0.55;0.58;0.60" dur="8s" fill="freeze"/>
+    <animate repeatCount="indefinite" attributeName="opacity" values="0;0;0.6;0.3;0" keyTimes="0;0.54;0.55;0.58;0.60" dur="8s" fill="freeze"/>
+  </circle>
+
+  <!-- ==================== WHITE FLASH ON CLICK ==================== -->
+  <rect width="1280" height="800" fill="white" opacity="0">
+    <animate repeatCount="indefinite" attributeName="opacity" values="0;0;0.18;0;0" keyTimes="0;0.57;0.585;0.60;1" dur="8s" fill="freeze"/>
+  </rect>
+
+  <!-- ==================== SCENE 2: ANTIROT BLOCKER ==================== -->
+  <g id="blockerOverlay" opacity="0">
+    <rect width="1280" height="800" fill="rgb(5, 5, 7)"/>
+
+    <g transform="translate(640, 360)">
+      <!-- Hexagon icon -->
+      <g filter="url(#redGlow)" transform="translate(0, -110)">
+        <g transform="translate(-28, -28) scale(2)">
+          <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="12" y1="22" x2="12" y2="15.5" stroke="#ef4444" stroke-width="1.5"/>
+          <polyline points="22,8.5 12,15.5 2,8.5" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+        </g>
+      </g>
+
+      <!-- Title -->
+      <text y="-20" fill="#e4e4e7" font-size="38" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle" letter-spacing="-0.5">Time is Valuable</text>
+
+      <!-- Subtitle -->
+      <text y="18" fill="#71717a" font-size="15" font-family="Arial, sans-serif" text-anchor="middle">Anti-Rot blocked this video because it doesn't align with your goals.</text>
+
+      <!-- Quote -->
+      <text y="72" fill="#a1a1aa" font-size="21" font-weight="500" font-style="italic" font-family="Georgia, serif" text-anchor="middle" opacity="0">
+        "The algorithm feeds you what keeps you average."
+        <animate repeatCount="indefinite" attributeName="opacity" values="0;0;0;1;1" keyTimes="0;0.62;0.66;0.70;1" dur="8s" fill="freeze"/>
+      </text>
+
+      <!-- Go Back button -->
+      <g transform="translate(-56, 115)" filter="url(#btnGlow)" opacity="0">
+        <rect width="112" height="40" rx="8" fill="#ef4444"/>
+        <text x="56" y="25" fill="white" font-size="14" font-weight="600" font-family="Arial, sans-serif" text-anchor="middle">← Go Back</text>
+        <animate repeatCount="indefinite" attributeName="opacity" values="0;0;0;1;1" keyTimes="0;0.66;0.70;0.74;1" dur="8s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Blocker overlay entrance -->
+    <animate repeatCount="indefinite" attributeName="opacity" values="0;0;0;1;1" keyTimes="0;0.58;0.60;0.62;1" dur="8s" fill="freeze"/>
+  </g>
+</svg>

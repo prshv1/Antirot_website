@@ -74,10 +74,7 @@
       </div>
 
       <div class="hero-demo">
-        <video id="demo-video" autoplay muted loop playsinline>
-          <source id="demo-video-src" src="media/product_demo.mp4" type="video/mp4">
-        </video>
-        <img id="demo-fallback" src="media/product_demo.gif" alt="AntiRot blocking a time-waste video" style="display:none; width:100%; border-radius: var(--radius-lg);">
+        <img id="demo-image" src="media/product_demo.svg" alt="AntiRot blocking a time-waste video" style="width:100%; border-radius: var(--radius-lg);">
       </div>
     </section>
 
@@ -251,18 +248,8 @@
       document.getElementById('hero-install-link').href = C.links.chromeWebStore;
       document.getElementById('cta-install-link').href = C.links.chromeWebStore;
 
-      // Demo assets
-      const demoVideo = document.getElementById('demo-video');
-      const demoFallback = document.getElementById('demo-fallback');
-      document.getElementById('demo-video-src').src = C.demo.video;
-      demoFallback.src = C.demo.fallbackGif;
-      demoVideo.load();
-
-      // If video fails to load, show gif fallback
-      demoVideo.addEventListener('error', () => {
-        demoVideo.style.display = 'none';
-        demoFallback.style.display = 'block';
-      }, true);
+      // Demo asset
+      document.getElementById('demo-image').src = C.demo.image;
 
       // Footer
       const footerLinks = document.getElementById('footer-links');

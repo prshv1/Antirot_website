@@ -28,8 +28,7 @@ const SITE_CONFIG = {
 
   // ── Demo Assets ──
   demo: {
-    video: 'media/product_demo.mp4',
-    fallbackGif: 'media/product_demo.gif',
+    image: 'media/product_demo.svg',
   },
 
   // ── API / Backend ──
