@@ -10,14 +10,13 @@
   <!-- OG Meta Tags -->
   <meta property="og:title" content="AntiRot — Guard Your Attention">
   <meta property="og:description" content="A Chrome extension that lets you use YouTube without YouTube using you.">
-  <meta property="og:image" content="https://prshv1.github.io/Antirot_website/media/og-image.png">
+  <meta property="og:image" content="https://prshv1.github.io/Antirot_website/og-image.png">
   <meta property="og:url" content="https://prshv1.github.io/Antirot_website/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AntiRot — Guard Your Attention">
   <meta name="twitter:description" content="A Chrome extension that lets you use YouTube without YouTube using you.">
-  <meta name="twitter:image" content="https://prshv1.github.io/Antirot_website/media/og-image.png
-">
+  <meta name="twitter:image" content="https://prshv1.github.io/Antirot_website/og-image.png">
 
   <link rel="stylesheet" href="style.css">
   <script src="config.js"></script>
@@ -77,8 +76,8 @@
       <div class="hero-demo">
         <video id="demo-video" autoplay muted loop playsinline>
           <source id="demo-video-src" src="media/product_demo.mp4" type="video/mp4">
-          <img id="demo-fallback" src="media/product_demo.gif" alt="AntiRot blocking a time-waste video">
         </video>
+        <img id="demo-fallback" src="media/product_demo.gif" alt="AntiRot blocking a time-waste video" style="display:none; width:100%; border-radius: var(--radius-lg);">
       </div>
     </section>
 
@@ -253,9 +252,17 @@
       document.getElementById('cta-install-link').href = C.links.chromeWebStore;
 
       // Demo assets
+      const demoVideo = document.getElementById('demo-video');
+      const demoFallback = document.getElementById('demo-fallback');
       document.getElementById('demo-video-src').src = C.demo.video;
-      document.getElementById('demo-fallback').src = C.demo.fallbackGif;
-      document.getElementById('demo-video').load();
+      demoFallback.src = C.demo.fallbackGif;
+      demoVideo.load();
+
+      // If video fails to load, show gif fallback
+      demoVideo.addEventListener('error', () => {
+        demoVideo.style.display = 'none';
+        demoFallback.style.display = 'block';
+      }, true);
 
       // Footer
       const footerLinks = document.getElementById('footer-links');
